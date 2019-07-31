@@ -1,1 +1,16 @@
-<h1>Heroe works</h1>
+<div class="card mb-3" style="max-width: 540px;">
+    <div class="row no-gutters">
+      <div class="col-md-4">
+        <img  [src]="heroe.img" class="card-img" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 [routerLink]="['/heroe',i]" class="card-title">{{heroe.nombre}}</h5>
+          <p  [routerLink]="['/heroe',i]" class="card-text">{{heroe.bio}}</p>
+          <p [routerLink]="['/heroe',i]" class="card-text"><small class="text-muted">{{heroe.aparicion}}</small></p>
+          <button (click)="volver()" type="button" class="btn btn-outline-primary btn-block" >Y volver, volver... ¡¡¡VOOOOLVER!!!</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
