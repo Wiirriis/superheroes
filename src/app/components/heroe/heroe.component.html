@@ -1,13 +1,15 @@
-<div class="card mb-3" style="max-width: 540px;">
+<div class="card mb-3 animated fadeIn fast" style="max-width: 540px;">
     <div class="row no-gutters">
       <div class="col-md-4">
-        <img  [src]="heroe.img" class="card-img" alt="...">
+        <img  [src]="heroe.img" class="card-img img-block" [alt]="heroe.nombre">
       </div>
       <div class="col-md-8">
-        <div class="card-body">
-          <h5 [routerLink]="['/heroe',i]" class="card-title">{{heroe.nombre}}</h5>
-          <p  [routerLink]="['/heroe',i]" class="card-text">{{heroe.bio}}</p>
-          <p [routerLink]="['/heroe',i]" class="card-text"><small class="text-muted">{{heroe.aparicion}}</small></p>
+        <div class="card-body animated fadeIn fast">
+          <h5 class="card-title animated fadeIn">{{heroe.nombre | uppercase}}</h5>
+          <img *ngIf="heroe.casa=='DC'" class="img-logo " src="/assets/img/dc-logo.png" alt="DC">
+          <img *ngIf="heroe.casa=='Marvel'" class="img-logo" src="/assets/img/marvel-logo.jpg" alt="DC">
+          <p  class="card-text ">{{heroe.bio}}</p>
+          <p  class="card-text "><small class="text-muted">{{heroe.aparicion}}</small></p>
           <button (click)="volver()" type="button" class="btn btn-outline-primary btn-block" >Y volver, volver... ¡¡¡VOOOOLVER!!!</button>
         </div>
       </div>
