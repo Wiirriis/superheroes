@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { HeroesService } from '../../services/heroes.service';
 import { async } from '@angular/core/testing';
@@ -13,6 +13,7 @@ export class ResultadoComponent implements OnInit {
 
   heroes:any[] = [];
   termino: string;
+
   constructor(private activatedRoute: ActivatedRoute,
               private _heroesService: HeroesService) {
       
