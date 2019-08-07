@@ -10,8 +10,9 @@ export class HeroeTarjetaComponent implements OnInit {
   @Input() heroe: any = {}; //Los imputs sirven cuando vamos a recibir información desde afuera
   @Input() index: number;
   
-
   @Output() heroeSeleccionado: EventEmitter<number>;
+
+  
   constructor(private router:Router) {
     this.heroeSeleccionado = new EventEmitter();
    }
@@ -20,7 +21,7 @@ export class HeroeTarjetaComponent implements OnInit {
   }
   
   verHeroe(){
-   /*  this.router.navigate(['/heroe', this.index]); */
-   this.heroeSeleccionado.emit(this.index);
+    this.router.navigate(['/heroe', this.index]);
+  /*  this.heroeSeleccionado.emit(this.index); */
   }
 }
